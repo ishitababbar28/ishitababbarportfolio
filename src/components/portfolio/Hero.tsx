@@ -33,7 +33,7 @@ export function Hero() {
         <div className="animate-fade-up">
           <span className="group inline-flex items-center gap-2 rounded-full border border-border bg-card/60 px-3 py-1 text-xs font-medium text-muted-foreground backdrop-blur transition-all hover:border-primary/50 hover:text-foreground">
             <Sparkles className="h-3.5 w-3.5 text-primary animate-bounce-soft" />
-            SIH 2025 Finalist · Top 5 of 500+
+            Aspiring Developer · Problem Solver
           </span>
           <h1 className="mt-6 text-5xl font-bold leading-[1.05] tracking-tight md:text-7xl">
             Hi, I'm <span className="text-gradient">Ishita</span>
@@ -63,7 +63,6 @@ export function Hero() {
           <div className="mt-10 flex gap-8 border-t border-border/60 pt-6">
             <Stat value="2nd" label="Yr B.Tech CSE" />
             <Stat value="Top 5" label="SIH 2025" />
-            <Stat value="4+" label="Projects" />
           </div>
         </div>
 

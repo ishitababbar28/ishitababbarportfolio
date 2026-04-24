@@ -31,10 +31,10 @@ export function About() {
         {highlights.map((h, i) => (
           <div
             key={h.title}
-            className="reveal group rounded-2xl border border-border bg-card/60 p-6 backdrop-blur transition-all duration-500 hover:-translate-y-1 hover:border-primary/40 hover:shadow-glow"
-            style={{ transitionDelay: `${i * 80}ms` }}
+            className="reveal-zoom tilt-card shimmer-border group rounded-2xl border border-border bg-card/60 p-6 backdrop-blur hover:border-primary/40 hover:shadow-glow"
+            style={{ transitionDelay: `${i * 120}ms` }}
           >
-            <div className="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-primary text-primary-foreground shadow-glow">
+            <div className="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-primary text-primary-foreground shadow-glow transition-transform duration-500 group-hover:rotate-6 group-hover:scale-110">
               <h.icon className="h-5 w-5" />
             </div>
             <h3 className="text-lg font-semibold">{h.title}</h3>

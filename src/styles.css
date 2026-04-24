@@ -160,6 +160,20 @@
     font-feature-settings: "cv11", "ss01";
     -webkit-font-smoothing: antialiased;
   }
+
+  @media (pointer: fine) {
+    html,
+    body,
+    a,
+    button,
+    [role="button"],
+    input,
+    textarea,
+    select,
+    label {
+      cursor: none;
+    }
+  }
 }
 
 @theme inline {

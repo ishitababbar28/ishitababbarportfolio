@@ -8,8 +8,8 @@ export function Experience() {
       eyebrow="Experience"
       title="Where I've contributed."
     >
-      <div className="reveal relative rounded-2xl border border-border bg-card/60 p-8 backdrop-blur shadow-card">
-        <div className="absolute -top-4 left-8 inline-flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-primary text-primary-foreground shadow-glow">
+      <div className="reveal-zoom shimmer-border relative rounded-2xl border border-border bg-card/60 p-8 backdrop-blur shadow-card transition-all hover:border-primary/40 hover:shadow-glow">
+        <div className="absolute -top-4 left-8 inline-flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-primary text-primary-foreground shadow-glow animate-bounce-soft">
           <Briefcase className="h-5 w-5" />
         </div>
         <div className="flex flex-wrap items-baseline justify-between gap-2 pt-2">
@@ -26,9 +26,13 @@ export function Experience() {
             "Introduced basics of Python and C programming",
             "Provided an overview of AI tools and their applications",
             "Helped learners build foundational technical skills",
-          ].map((item) => (
-            <li key={item} className="flex gap-2.5">
-              <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
+          ].map((item, idx) => (
+            <li
+              key={item}
+              className="reveal flex gap-2.5"
+              style={{ transitionDelay: `${idx * 100}ms` }}
+            >
+              <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-primary shadow-glow" />
               <span>{item}</span>
             </li>
           ))}

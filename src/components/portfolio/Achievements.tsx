@@ -1,5 +1,6 @@
 import { Section } from "./Section";
 import { Trophy, Award, Medal } from "lucide-react";
+import { ImageIcon } from "lucide-react";
 
 const items = [
   {
@@ -7,18 +8,21 @@ const items = [
     title: "Smart India Hackathon 2025 — Finalist",
     badge: "Top 5 / 500+",
     body: "Represented Manav Rachna University at the Grand Finale in Mumbai. Built an AI-based solution within a 36-hour environment — gained hands-on experience in teamwork, problem-solving, and real-world innovation.",
+    certificate: "",
   },
   {
     icon: Medal,
     title: "Technology & Science Quiz",
     badge: "2nd Position",
     body: "Secured 2nd position in the Everyday Technology and Hidden Science Quiz at Manav Rachna University (2026).",
+    certificate: "",
   },
   {
     icon: Award,
     title: "Utsav of Excellence",
     badge: "Top 20 / 540+",
     body: "Selected among the top 20 in a multi-round competition by the Career Development Centre — clearing analytical, product pitching, group discussion, and situational rounds.",
+    certificate: "",
   },
 ];
 
@@ -38,6 +42,26 @@ export function Achievements() {
           >
             <div className="absolute -right-10 -top-10 h-32 w-32 rounded-full bg-gradient-primary opacity-0 blur-3xl transition-opacity duration-500 group-hover:opacity-40" />
             <div className="relative">
+              {/* Certificate hover-reveal */}
+              <div className="mb-4 h-0 overflow-hidden opacity-0 transition-all duration-500 ease-out group-hover:mb-5 group-hover:h-36 group-hover:opacity-100">
+                <div className="relative h-full w-full overflow-hidden rounded-lg border border-primary/30 bg-muted/40 shadow-glow">
+                  {it.certificate ? (
+                    <img
+                      src={it.certificate}
+                      alt={`${it.title} certificate`}
+                      className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                      loading="lazy"
+                    />
+                  ) : (
+                    <div className="flex h-full w-full flex-col items-center justify-center gap-1 text-muted-foreground">
+                      <ImageIcon className="h-5 w-5" />
+                      <span className="text-[10px] uppercase tracking-wider">Certificate</span>
+                    </div>
+                  )}
+                  <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent" />
+                </div>
+              </div>
+
               <div className="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-primary text-primary-foreground shadow-glow transition-transform duration-500 group-hover:-rotate-6 group-hover:scale-110">
                 <it.icon className="h-5 w-5 transition-transform duration-500 group-hover:scale-110" />
               </div>

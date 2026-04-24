@@ -7,6 +7,7 @@ import { Experience } from "@/components/portfolio/Experience";
 import { Achievements } from "@/components/portfolio/Achievements";
 import { Projects } from "@/components/portfolio/Projects";
 import { Contact } from "@/components/portfolio/Contact";
+import { CustomCursor } from "@/components/portfolio/CustomCursor";
 import { useReveal } from "@/hooks/use-reveal";
 import { useSpotlight } from "@/hooks/use-spotlight";
 
@@ -35,6 +36,7 @@ function Index() {
   useSpotlight();
   return (
     <div className="min-h-screen bg-background text-foreground">
+      <CustomCursor />
       <Navbar />
       <main>
         <Hero />

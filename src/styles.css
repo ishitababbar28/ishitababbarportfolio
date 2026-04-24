@@ -146,6 +146,14 @@
     border-color: var(--color-border);
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
+  section[id] {
+    scroll-margin-top: 80px;
+  }
+
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
@@ -312,6 +320,28 @@
 }
 .tilt-card:hover {
   transform: translateY(-6px) rotateX(2deg) rotateY(-2deg);
+}
+
+/* Mouse-tracked spotlight overlay (used with useSpotlight) */
+.spotlight {
+  position: relative;
+}
+.spotlight::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  background: radial-gradient(
+    320px circle at var(--mx, 50%) var(--my, 50%),
+    oklch(0.78 0.16 200 / 0.18),
+    transparent 60%
+  );
+}
+.spotlight:hover::after {
+  opacity: 1;
 }
 
 /* Respect reduced motion */

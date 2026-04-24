@@ -8,6 +8,7 @@ import { Achievements } from "@/components/portfolio/Achievements";
 import { Projects } from "@/components/portfolio/Projects";
 import { Contact } from "@/components/portfolio/Contact";
 import { useReveal } from "@/hooks/use-reveal";
+import { useSpotlight } from "@/hooks/use-spotlight";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -31,6 +32,7 @@ export const Route = createFileRoute("/")({
 
 function Index() {
   useReveal();
+  useSpotlight();
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Navbar />

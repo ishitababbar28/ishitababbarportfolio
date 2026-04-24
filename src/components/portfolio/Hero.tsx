@@ -7,17 +7,32 @@ export function Hero() {
       id="top"
       className="relative overflow-hidden bg-hero pt-32 pb-24 md:pt-40 md:pb-32"
     >
-      {/* Decorative orbs */}
-      <div className="pointer-events-none absolute -left-24 top-20 h-72 w-72 rounded-full bg-primary/20 blur-3xl animate-float" />
+      {/* Decorative blobs */}
+      <div className="pointer-events-none absolute -left-24 top-20 h-72 w-72 rounded-full bg-primary/25 blur-3xl animate-blob" />
       <div
-        className="pointer-events-none absolute -right-24 bottom-0 h-80 w-80 rounded-full bg-accent/20 blur-3xl animate-float"
-        style={{ animationDelay: "2s" }}
+        className="pointer-events-none absolute -right-24 bottom-0 h-80 w-80 rounded-full bg-accent/25 blur-3xl animate-blob"
+        style={{ animationDelay: "3s" }}
+      />
+      <div
+        className="pointer-events-none absolute left-1/2 top-1/3 h-64 w-64 -translate-x-1/2 rounded-full bg-primary-foreground/0 bg-[radial-gradient(circle,oklch(0.78_0.16_280/.18),transparent_70%)] blur-2xl animate-blob"
+        style={{ animationDelay: "6s" }}
+      />
+
+      {/* Subtle grid */}
+      <div
+        className="pointer-events-none absolute inset-0 opacity-[0.06]"
+        style={{
+          backgroundImage:
+            "linear-gradient(var(--color-foreground) 1px, transparent 1px), linear-gradient(90deg, var(--color-foreground) 1px, transparent 1px)",
+          backgroundSize: "44px 44px",
+          maskImage: "radial-gradient(ellipse at center, #000 30%, transparent 75%)",
+        }}
       />
 
       <div className="relative mx-auto grid max-w-6xl grid-cols-1 items-center gap-12 px-6 md:grid-cols-2">
         <div className="animate-fade-up">
-          <span className="inline-flex items-center gap-2 rounded-full border border-border bg-card/60 px-3 py-1 text-xs font-medium text-muted-foreground backdrop-blur">
-            <Sparkles className="h-3.5 w-3.5 text-primary" />
+          <span className="group inline-flex items-center gap-2 rounded-full border border-border bg-card/60 px-3 py-1 text-xs font-medium text-muted-foreground backdrop-blur transition-all hover:border-primary/50 hover:text-foreground">
+            <Sparkles className="h-3.5 w-3.5 text-primary animate-bounce-soft" />
             SIH 2025 Finalist · Top 5 of 500+
           </span>
           <h1 className="mt-6 text-5xl font-bold leading-[1.05] tracking-tight md:text-7xl">
@@ -53,8 +68,17 @@ export function Hero() {
         </div>
 
         <div className="relative mx-auto animate-scale-in">
-          <div className="absolute -inset-4 rounded-[2rem] bg-gradient-primary opacity-30 blur-2xl" />
-          <div className="relative overflow-hidden rounded-[2rem] border border-border bg-card shadow-card animate-glow">
+          <div className="absolute -inset-6 rounded-[2.25rem] bg-gradient-primary opacity-30 blur-2xl animate-blob" />
+          {/* Rotating conic ring */}
+          <div
+            className="pointer-events-none absolute -inset-2 rounded-[2.25rem] opacity-60 animate-spin-slow"
+            style={{
+              background:
+                "conic-gradient(from 0deg, transparent 0deg, oklch(0.78 0.16 200 / .6) 60deg, transparent 120deg, oklch(0.82 0.18 280 / .6) 240deg, transparent 300deg)",
+              filter: "blur(8px)",
+            }}
+          />
+          <div className="relative overflow-hidden rounded-[2rem] border border-border bg-card shadow-card animate-glow animate-tilt">
             <img
               src={ishita}
               alt="Portrait of Ishita Babbar"

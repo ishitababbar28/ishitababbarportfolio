@@ -1,6 +1,7 @@
 import { Section } from "./Section";
 import { Trophy, Award, Medal, ImageIcon } from "lucide-react";
 import certSih from "@/assets/cert-sih.png";
+import certQuiz from "@/assets/cert-quiz.png";
 
 const items = [
   {
@@ -15,7 +16,7 @@ const items = [
     title: "Technology & Science Quiz",
     badge: "2nd Position",
     body: "Secured 2nd position in the Everyday Technology and Hidden Science Quiz at Manav Rachna University (2026).",
-    certificate: "",
+    certificate: certQuiz,
   },
   {
     icon: Award,

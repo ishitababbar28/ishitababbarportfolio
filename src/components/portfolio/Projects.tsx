@@ -40,17 +40,10 @@ export function Projects() {
         {projects.map((p, i) => (
           <article
             key={p.name}
-            className={`${i % 2 === 0 ? "reveal-left" : "reveal-right"} tilt-card shimmer-border group relative overflow-hidden rounded-2xl border border-border bg-card/60 p-7 backdrop-blur hover:border-primary/40 hover:shadow-glow`}
+            className={`${i % 2 === 0 ? "reveal-left" : "reveal-right"} tilt-card shimmer-border spotlight group relative overflow-hidden rounded-2xl border border-border bg-card/60 p-7 backdrop-blur hover:border-primary/40 hover:shadow-glow`}
             style={{ transitionDelay: `${i * 100}ms` }}
           >
-            <div
-              className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-500 group-hover:opacity-100"
-              style={{
-                background:
-                  "radial-gradient(400px circle at 50% 0%, oklch(0.78 0.16 200 / .12), transparent 60%)",
-              }}
-            />
-            <div className="flex items-start justify-between">
+            <div className="relative z-10 flex items-start justify-between">
               <div className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-primary text-primary-foreground shadow-glow transition-transform duration-500 group-hover:rotate-6 group-hover:scale-110">
                 <p.icon className="h-5 w-5" />
               </div>

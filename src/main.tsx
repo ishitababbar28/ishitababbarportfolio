@@ -1,4 +1,5 @@
-import { createFileRoute } from "@tanstack/react-router";
+import React from "react";
+import { createRoot } from "react-dom/client";
 import { Navbar } from "@/components/portfolio/Navbar";
 import { Hero } from "@/components/portfolio/Hero";
 import { About } from "@/components/portfolio/About";
@@ -10,30 +11,12 @@ import { Contact } from "@/components/portfolio/Contact";
 import { CustomCursor } from "@/components/portfolio/CustomCursor";
 import { useReveal } from "@/hooks/use-reveal";
 import { useSpotlight } from "@/hooks/use-spotlight";
+import "./styles.css";
 
-export const Route = createFileRoute("/")({
-  component: Index,
-  head: () => ({
-    meta: [
-      { title: "Ishita Babbar — B.Tech CSE · Aspiring Developer" },
-      {
-        name: "description",
-        content:
-          "Portfolio of Ishita Babbar — B.Tech CSE student, SIH 2025 Finalist, aspiring developer and problem solver.",
-      },
-      { property: "og:title", content: "Ishita Babbar — Portfolio" },
-      {
-        property: "og:description",
-        content:
-          "B.Tech CSE student, SIH 2025 Finalist, aspiring developer and problem solver.",
-      },
-    ],
-  }),
-});
-
-function Index() {
+function App() {
   useReveal();
   useSpotlight();
+
   return (
     <div className="min-h-screen bg-background text-foreground">
       <CustomCursor />
@@ -50,3 +33,9 @@ function Index() {
     </div>
   );
 }
+
+createRoot(document.getElementById("root")!).render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);

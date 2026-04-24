@@ -1,6 +1,6 @@
 import { Section } from "./Section";
-import { Trophy, Award, Medal } from "lucide-react";
-import { ImageIcon } from "lucide-react";
+import { Trophy, Award, Medal, ImageIcon } from "lucide-react";
+import certSih from "@/assets/cert-sih.png";
 
 const items = [
   {
@@ -8,7 +8,7 @@ const items = [
     title: "Smart India Hackathon 2025 — Finalist",
     badge: "Top 5 / 500+",
     body: "Represented Manav Rachna University at the Grand Finale in Mumbai. Built an AI-based solution within a 36-hour environment — gained hands-on experience in teamwork, problem-solving, and real-world innovation.",
-    certificate: "",
+    certificate: certSih,
   },
   {
     icon: Medal,

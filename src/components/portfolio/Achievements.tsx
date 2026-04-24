@@ -33,7 +33,7 @@ export function Achievements() {
         {items.map((it, i) => (
           <article
             key={it.title}
-            className={`${i % 2 === 0 ? "reveal-left" : "reveal-right"} tilt-card shimmer-border group relative overflow-hidden rounded-2xl border border-border bg-card/60 p-6 backdrop-blur hover:border-primary/40 hover:shadow-glow`}
+            className={`${i % 2 === 0 ? "reveal-left" : "reveal-right"} tilt-card shimmer-border spotlight group relative overflow-hidden rounded-2xl border border-border bg-card/60 p-6 backdrop-blur hover:border-primary/40 hover:shadow-glow`}
             style={{ transitionDelay: `${i * 120}ms` }}
           >
             <div className="absolute -right-10 -top-10 h-32 w-32 rounded-full bg-gradient-primary opacity-0 blur-3xl transition-opacity duration-500 group-hover:opacity-40" />

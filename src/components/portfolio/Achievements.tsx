@@ -33,13 +33,13 @@ export function Achievements() {
         {items.map((it, i) => (
           <article
             key={it.title}
-            className="reveal group relative overflow-hidden rounded-2xl border border-border bg-card/60 p-6 backdrop-blur transition-all duration-500 hover:-translate-y-1 hover:border-primary/40 hover:shadow-glow"
-            style={{ transitionDelay: `${i * 80}ms` }}
+            className={`${i % 2 === 0 ? "reveal-left" : "reveal-right"} tilt-card shimmer-border group relative overflow-hidden rounded-2xl border border-border bg-card/60 p-6 backdrop-blur hover:border-primary/40 hover:shadow-glow`}
+            style={{ transitionDelay: `${i * 120}ms` }}
           >
-            <div className="absolute -right-10 -top-10 h-32 w-32 rounded-full bg-gradient-primary opacity-0 blur-3xl transition-opacity duration-500 group-hover:opacity-30" />
+            <div className="absolute -right-10 -top-10 h-32 w-32 rounded-full bg-gradient-primary opacity-0 blur-3xl transition-opacity duration-500 group-hover:opacity-40" />
             <div className="relative">
-              <div className="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-primary text-primary-foreground shadow-glow">
-                <it.icon className="h-5 w-5" />
+              <div className="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-primary text-primary-foreground shadow-glow transition-transform duration-500 group-hover:-rotate-6 group-hover:scale-110">
+                <it.icon className="h-5 w-5 transition-transform duration-500 group-hover:scale-110" />
               </div>
               <span className="inline-block rounded-full border border-primary/40 bg-primary/10 px-2.5 py-0.5 text-xs font-semibold text-primary">
                 {it.badge}

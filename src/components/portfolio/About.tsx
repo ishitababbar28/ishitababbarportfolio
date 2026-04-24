@@ -31,7 +31,7 @@ export function About() {
         {highlights.map((h, i) => (
           <div
             key={h.title}
-            className="reveal-zoom tilt-card shimmer-border group rounded-2xl border border-border bg-card/60 p-6 backdrop-blur hover:border-primary/40 hover:shadow-glow"
+            className="reveal-zoom tilt-card shimmer-border spotlight group rounded-2xl border border-border bg-card/60 p-6 backdrop-blur hover:border-primary/40 hover:shadow-glow"
             style={{ transitionDelay: `${i * 120}ms` }}
           >
             <div className="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-primary text-primary-foreground shadow-glow transition-transform duration-500 group-hover:rotate-6 group-hover:scale-110">
